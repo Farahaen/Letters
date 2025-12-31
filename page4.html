@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do You Love Me? 💘</title>
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  background:#fff0f5;
+  font-family:'Segoe UI', sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+}
+
+.container{
+  background:rgba(255,255,255,0.85);
+  padding:25px;
+  border-radius:20px;
+  width:90%;
+  max-width:400px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+h1{
+  color:#ff6f91;
+  margin-bottom:20px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-top:20px;
+}
+
+button{
+  padding:12px 20px;
+  border:none;
+  border-radius:15px;
+  font-size:1rem;
+  cursor:pointer;
+  transition:transform 0.2s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+
+.yes{
+  background:#ff6f91;
+  color:white;
+}
+
+.no{
+  background:#bbb;
+  color:white;
+}
+
+#result{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin-top:20px;
+}
+
+#message{
+  font-size:1.1rem;
+  margin-top:10px;
+}
+#nextBtn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      background: #ff6f91;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #nextBtn:hover {
+      background: #ff4c70;
+    }
+
+#faceGif{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:20px;
+  margin-top:15px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Do you love me? 💘</h1>
+
+  <div class="buttons">
+    <button class="yes" onclick="sayYes()">Yes 💗</button>
+    <button class="no" onclick="sayNo()">No 🙄</button>
+  </div>
+
+  <div id="result">
+    <p id="message"></p>
+    <img id="faceGif" src="">
+  </div>
+  <br>
+<a href="page5.html" id="nextBtn">Next 💕</a>
+</div>
+
+<script>
+function sayYes(){
+  const gif = document.getElementById("faceGif");
+  document.getElementById("message").innerHTML = "Hehe I knew it 😌 I love you too baby!💗";
+  gif.src = "shappy.gif";
+  gif.style.display = "block";
+}
+
+function sayNo(){
+  const gif = document.getElementById("faceGif");
+  document.getElementById("message").innerHTML = "Baby… why would you do this to me 😔💔";
+  gif.src = "sad.gif";
+  gif.style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reasons I’m Grateful 💗</title>
+  <style>
+    body {
+      margin:0;
+      padding:0;
+      font-family:'Segoe UI', sans-serif;
+      background: #fff0f5;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      color:#333;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #ff6f91;
+      text-align:center;
+      margin-bottom:30px;
+    }
+    #reasonBox {
+      background: rgba(255,255,255,0.8);
+      padding:20px;
+      border-radius:20px;
+      max-width:500px;
+      width:90%;
+      text-align:center;
+      font-size:1.2rem;
+      min-height:120px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    }
+    button {
+      margin-top:30px;
+      padding:12px 25px;
+      font-size:1rem;
+      border:none;
+      border-radius:15px;
+      background:#ff6f91;
+      color:white;
+      cursor:pointer;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    /* ===== Next Button ===== */
+    #nextBtn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      background: #ff6f91;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #nextBtn:hover {
+      background: #ff4c70;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="hearts"></div>
+  <h1>Reasons I’m Grateful for You 💗</h1>
+  <div id="reasonBox">Click the button to see a lot of reasons 💕</div>
+  <button id="showReason">Show me 💖</button>
+  <a href="page4.html" id="nextBtn">Next 💕</a>
+  <audio id="bgm" src="taylor.mp3" autoplay loop></audio>
+
+  <script>
+    const reasons = [
+"Thank you for making me smile so much, even on my worst days. 🥰",
+  "Thank you for always making time for me, playing Roblox with me, chatting with me, even when you’re busy. 🎮",
+  "Thank you for accepting me exactly the way I am. 💗",
+  "Thank you for reassuring me, even after you annoy me… even when I’ve already forgiven you. 😅",
+  "I love how you still comfort me, even when I pretend to be upset just to get more of your attention hehe 🤭",
+  "Thank you for listening to me, for asking about my day, and for always sending me good morning and good night messages, thatt really make my day. 🌞🌙",
+  "Lastly, Thank you for simply existing in this world, and for being my everything. Love you babee! 💖"
+]
+
+
+    let index = 0;
+    const reasonBox = document.getElementById('reasonBox');
+    const btn = document.getElementById('showReason');
+
+    btn.addEventListener('click', () => {
+      reasonBox.textContent = reasons[index];
+      index++;
+      if(index >= reasons.length) index = 0;
+    });
+  </script>
+</body>
+</html>

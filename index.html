@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Just Us 💗</title>
+<style>/* RESET */
+   
+    
+    /* BACKGROUND */
+    body {
+        margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffeef2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      color: #333;  background: linear-gradient(135deg, #ffd6e8, #fff1f7);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+   
+    /* CARD */
+    .card {
+      max-width: 420px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* TEXT */
+    h1 {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    .highlight {
+      color: #ff6f91;
+      font-weight: bold;
+    }
+    
+    /* BUTTONS */
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .btn {
+      padding: 12px;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    
+    .btn.yes {
+      background: #ff6f91;
+      color: white;
+    }
+    
+    .btn.no {
+      background: #ddd;
+      color: #333;
+    }
+    
+    .btn.sorry {
+      background: #ff9eb5;
+      color: white;
+      margin-top: 10px;
+    }
+    
+    /* HOVER (PC) */
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    
+    /* SHAKE */
+    .btn.no:hover {
+      animation: shake 0.4s;
+    }
+    
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+    
+    /* SAD BOX */
+    #sadBox {
+      margin-top: 20px;
+    }
+    
+    #sadBox img {
+      width: 120px;
+      margin-top: 10px;
+    }
+    
+    /* HIDDEN */
+    .hidden {
+      display: none;
+    }
+    
+    /* DESKTOP */
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+    
+      .card {
+        max-width: 500px;
+        padding: 35px;
+      }
+    }
+    
+</style>
+</head>
+<body>
+<section id="page1" class="page active">
+<div class="card">
+<h1>Hi baby 🥺💗<br>I made this just for you.<br>Only you.<br><span class="highlight">My one and only.</span></h1>
+<div class="buttons">
+<a href="page2.html"  class="btn yes">Let’s Start 💕</a>
+<button class="btn no" onclick="goNo()">No 🙄</button>
+</div>
+<div id="sadBox" class="hidden">
+<p>Baby… are you trying to make me sad? 😔</p>
+<img src="sadcat.jpg" alt="sad cat"/><br>
+<button class="btn sorry" onclick="resetPage()">Okay okay 😭 I’m sorry</button>
+</div>
+</div>
+</section>
+<script>
+function goNo(){document.getElementById("sadBox").classList.remove("hidden");}
+function resetPage(){document.getElementById("sadBox").classList.add("hidden");}
+</script>
+</body>
+</html>
